@@ -13,4 +13,4 @@ This project was created to practise the Bootstrap 4 and has the following topic
 |1|Sizing & Borders| [Here](https://github.com/kirankrishna/bootstrap_sandbox/tree/Sizing&Borders)|
 |1|Media Breakpoints| [Here](https://github.com/kirankrishna/bootstrap_sandbox/tree/Breakpoints)|
 |2|Button classes| [Here](https://github.com/kirankrishna/bootstrap_sandbox/tree/Buttons)|
-|2|Nav bars| [Here](https://github.com/kirankrishna/bootstrap_sandbox/tree/NavBars|
+|2|Nav bars| [Here](https://github.com/kirankrishna/bootstrap_sandbox/tree/NavBars)|
