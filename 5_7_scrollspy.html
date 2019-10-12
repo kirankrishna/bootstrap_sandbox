@@ -92,7 +92,7 @@
 
   <div class="container">
     <!--#################START HERE#####################-->
-    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light mb-3">
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light mb-3" id="main-nav">
       <div class="container">
         <a class="navbar-brand" href="#">Navbar</a>
         <ul class="navbar-nav">
@@ -109,7 +109,7 @@
       </div>
     </nav>
 
-    <section>
+    <section id="welcome">
       <h3>Welcome</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, reiciendis ullam sit libero recusandae obcaecati
         modi,
@@ -163,7 +163,7 @@
         ut, quidem cum architecto.</p>
     </section>
 
-    <section>
+    <section id="about">
       <h3>About</h3>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt nemo iure at, ab cupiditate consequuntur
       nobis hic
@@ -228,7 +228,7 @@
       Ratione perferendis commodi ullam!
     </section>
 
-    <section>
+    <section id="services">
       <h3>Services</h3>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente laudantium reiciendis nostrum impedit
         voluptatum
@@ -296,7 +296,31 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <script>
+    $("body").scrollspy({
+      target: "#main-nav"
+    });
 
+    $('#main-nav a').on("click", function (e) {
+      //check for hash value
+      if (this.hash !== "") {
+        //prevent default
+        e.preventDefault();
+
+        //save hash in local variable
+        const hash = this.hash;
+
+        console.log(hash)
+
+        //Animate smooth scrolling
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 1500, function () {
+          console.log("callback")
+          window.location.hash = hash;
+        });
+      }
+
+    });
   </script>
 </body>
 
